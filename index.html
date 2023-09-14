@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+    <div>
+        <div>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Stark Corporation</a>
+                </div>
+            </nav>
+        </div>
+        <div style="margin-top: 90px;">
+            <div class="container mt-5">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Pesquisar..." aria-label="Pesquisar" aria-describedby="botao-pesquisar" id="barraPesquisa">
+                    <button class="btn btn-outline-secondary" type="button" id="botao-pesquisar">Pesquisar</button>   
+                </div>
+            </div>
+        </div>
+        <div class="container p-5 my-5 border fixed-bottom">
+            <h4 style="padding: 10px;">Moedas em alta:</h4>
+            <div class="container mt-3">
+                <table class="table table-hover">
+                    <thead>  
+                        <tr>
+                            <th></th>
+                            <th>Nome</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="redirecionarParaOutraPagina('./bitcoin.html')"> 
+                            <td><img src="./img/bitcoin.png" style="width: 40px;"></td>
+                            <td>Bitcoin</td>
+                            <td id="bitcoinPrice"></td>
+                        </tr>
+                        <tr onclick="redirecionarParaOutraPagina('./ethereum.html')">
+                            <td><img src="./img/ethereum.png" style="width: 40px;"></td>
+                            <td>Ethereum</td>
+                            <td id="ethereumPrice"></td>
+                        </tr>
+                        <tr onclick="redirecionarParaOutraPagina('./doge.html')">
+                            <td><img src="./img/doge.jpeg" style="width: 50px;"></td>
+                            <td>Doge</td>
+                            <td id="dogecoinPrice"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
